@@ -3,19 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Rust and JavaScript Example</title>
-    <style>
-        .wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .subwrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script type="module">
         import init, { exclude_lines, separate_lines } from './pkg/rust_wasm_example.js';
         async function run() {
@@ -42,32 +30,33 @@
         <div class="sorter-wrapper subwrapper">
             <h1>Line Sorter</h1>
             <label for="userMessage">Your text:</label>
-            <textarea id="userMessage" name="userMessage" rows="14" cols="70"></textarea>
+            <textarea id="userMessage" name="userMessage" rows="14" cols="40"></textarea>
             <br>
-            <label for="exludedWord">The lines containing this word will be excluded from your text:</label>
+            <label for="exludedWord">
+                Lines containing the specified word will be excluded
+            </label>
             <br>
             <input type="text" id="exludedWord" name="exludedWord">
             <br>
             <button id="excludeLinesBtn">Run</button>
             <br>
-            <label for="outputText1">Result:</label>
-            <br>
-            <textarea id="outputText1" name="outputText1" rows="12" cols="70" readonly></textarea>
+            <label for="outputText1">Output</label>
+            <textarea id="outputText1" name="outputText1" rows="12" cols="40" readonly></textarea>
         </div>
         <div class="separator-wrapper subwrapper">
             <h1>Line Separator</h1>
             <label for="textToBreak">Your text:</label>
-            <textarea id="textToBreak" name="textToBreak" rows="14" cols="70"></textarea>
+            <textarea id="textToBreak" name="textToBreak" rows="14" cols="40"></textarea>
             <br>
-            <label for="separator">A new line will be added after the word that you specify:</label>
+            <label for="separator">A newline will be inserted after the designated word
+            </label>
             <br>
             <input type="text" id="separator" name="separator">
             <br>
             <button id="separateLinesBtn">Run</button>
             <br>
-            <label for="outputText2">Result:</label>
-            <br>
-            <textarea id="outputText2" name="outputText2" rows="12" cols="70" readonly></textarea>
+            <label for="outputText2">Output</label>
+            <textarea id="outputText2" name="outputText2" rows="12" cols="40" readonly></textarea>
         </div>
     </div>
 </body>
