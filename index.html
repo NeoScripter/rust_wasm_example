@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Rust and JavaScript Example</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <script type="module">
         import init, { exclude_lines, separate_lines } from './pkg/rust_wasm_example.js';
         async function run() {
@@ -26,35 +27,31 @@
     </script>
 </head>
 <body>
+    <div class="selection-wrapper">
+        <select name="mySelect" id="selection">
+            <option value='sorter-wrapper'>Line sorter</option>
+            <option value='separator-wrapper'>Line separator</option>
+        </select>
+    </div>
     <div class="wrapper">
         <div class="sorter-wrapper subwrapper">
-            <h1>Line Sorter</h1>
             <label for="userMessage">Your text:</label>
             <textarea id="userMessage" name="userMessage" rows="14" cols="40"></textarea>
-            <br>
             <label for="exludedWord">
                 Lines containing the specified word will be excluded
             </label>
-            <br>
             <input type="text" id="exludedWord" name="exludedWord">
-            <br>
             <button id="excludeLinesBtn">Run</button>
-            <br>
             <label for="outputText1">Output</label>
             <textarea id="outputText1" name="outputText1" rows="12" cols="40" readonly></textarea>
         </div>
-        <div class="separator-wrapper subwrapper">
-            <h1>Line Separator</h1>
+        <div class="separator-wrapper subwrapper hidden">
             <label for="textToBreak">Your text:</label>
             <textarea id="textToBreak" name="textToBreak" rows="14" cols="40"></textarea>
-            <br>
             <label for="separator">A newline will be inserted after the designated word
             </label>
-            <br>
             <input type="text" id="separator" name="separator">
-            <br>
             <button id="separateLinesBtn">Run</button>
-            <br>
             <label for="outputText2">Output</label>
             <textarea id="outputText2" name="outputText2" rows="12" cols="40" readonly></textarea>
         </div>

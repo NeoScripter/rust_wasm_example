@@ -1,1 +1,1 @@
-# rust_wasm_example
+[# rust_wasm_example](https://neoscripter.github.io/rust_wasm_example/)

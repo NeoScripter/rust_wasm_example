@@ -28,9 +28,14 @@ body {
     color: white;
 }
 
+.selection-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
 }
 
 .subwrapper {
@@ -38,6 +43,8 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    max-width: 40rem;
+    width: 100vw;
 }
 
 h1 {
@@ -47,11 +54,13 @@ h1 {
 label {
     font-weight: 800;
     text-align: center;
+    margin-top: 1.5em;
 }
 
 input, textarea {
     border-radius: 15px;
     font-weight: 500;
+    margin-top: 1.5em;
 }
 
 button {
@@ -63,4 +72,36 @@ button {
     color: white;
     font-family: 'Tilt Neon';
     font-size: 1rem;
+    margin-top: 1.5em;
+    text-shadow: -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0,0,0,0.5),
+    2px 2px 1px rgba(0,0,0,0.7),
+    0px 0px 2px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    box-shadow: 
+    4px 4px 6px rgba(0,0,0,0.8),
+    inset 3px 3px 5px rgba(255, 255, 255, 0.7),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.7);
+    background-image: 
+        linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.15) 100%);
+    background-position: top left;
+}
+
+#selection {
+    border-radius: 5px;
+    background-color: var(--darkest-clr);
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    width: 15rem;
+    font-family: 'Tilt Neon';
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+.hidden {
+    display: none;
 }
