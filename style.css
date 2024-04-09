@@ -23,7 +23,7 @@
 }
 
 body {
-    font-family: 'Tilt Neon';
+    font-family: 'Tilt Neon', system-ui;
     background: var(--main-gr);
     color: white;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 h1 {
-    font-family: 'Tilt Neon';
+    font-family: 'Tilt Neon', system-ui;
 }
 
 label {
@@ -70,7 +70,7 @@ button {
     padding: 0.5em 2em;
     font-weight: 800;
     color: white;
-    font-family: 'Tilt Neon';
+    font-family: 'Tilt Neon', system-ui;
     font-size: 1rem;
     margin-top: 1.5em;
     text-shadow: -1px -1px 1px #aaa,
@@ -87,14 +87,14 @@ button {
     background-position: top left;
 }
 
-#selection {
+.selection {
     border-radius: 5px;
     background-color: var(--darkest-clr);
     color: white;
     font-weight: 700;
     font-size: 1.4rem;
     width: 15rem;
-    font-family: 'Tilt Neon';
+    font-family: 'Tilt Neon', system-ui;
 }
 
 textarea {

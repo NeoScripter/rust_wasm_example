@@ -27,33 +27,72 @@
     </script>
 </head>
 <body>
-    <div class="selection-wrapper">
-        <select name="mySelect" id="selection">
-            <option value='sorter-wrapper'>Line sorter</option>
-            <option value='separator-wrapper'>Line separator</option>
+    <div class="version-wrapper">
+        <select name="language" id="language-version">
+            <option value='english'>English</option>
+            <option value='russian'>Русский</option>
         </select>
     </div>
-    <div class="wrapper">
-        <div class="sorter-wrapper subwrapper">
-            <label for="userMessage">Your text:</label>
-            <textarea id="userMessage" name="userMessage" rows="14" cols="40"></textarea>
-            <label for="exludedWord">
-                Lines containing the specified word will be excluded
-            </label>
-            <input type="text" id="exludedWord" name="exludedWord">
-            <button id="excludeLinesBtn">Run</button>
-            <label for="outputText1">Output</label>
-            <textarea id="outputText1" name="outputText1" rows="12" cols="40"></textarea>
+    <div class="english">
+        <div class="selection-wrapper">
+            <select name="mySelect" class="selection">
+                <option value='sorter-wrapper'>Line sorter</option>
+                <option value='separator-wrapper'>Line separator</option>
+            </select>
         </div>
-        <div class="separator-wrapper subwrapper hidden">
-            <label for="textToBreak">Your text:</label>
-            <textarea id="textToBreak" name="textToBreak" rows="14" cols="40"></textarea>
-            <label for="separator">A newline will be inserted after the designated word
-            </label>
-            <input type="text" id="separator" name="separator">
-            <button id="separateLinesBtn">Run</button>
-            <label for="outputText2">Output</label>
-            <textarea id="outputText2" name="outputText2" rows="12" cols="40"></textarea>
+        <div class="wrapper">
+            <div class="sorter-wrapper subwrapper">
+                <label for="userMessage">Your text:</label>
+                <textarea id="userMessage" name="userMessage" rows="14" cols="40"></textarea>
+                <label for="exludedWord">
+                    Lines containing the specified word will be excluded
+                </label>
+                <input type="text" id="exludedWord" name="exludedWord">
+                <button id="excludeLinesBtn">Run</button>
+                <label for="outputText1">Output</label>
+                <textarea id="outputText1" name="outputText1" rows="12" cols="40"></textarea>
+            </div>
+            <div class="separator-wrapper subwrapper hidden">
+                <label for="textToBreak">Your text:</label>
+                <textarea id="textToBreak" name="textToBreak" rows="14" cols="40"></textarea>
+                <label for="separator">A newline will be inserted after the designated word
+                </label>
+                <input type="text" id="separator" name="separator">
+                <button id="separateLinesBtn">Run</button>
+                <label for="outputText2">Output</label>
+                <textarea id="outputText2" name="outputText2" rows="12" cols="40"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="russian">
+        <div class="selection-wrapper">
+            <select name="mySelect" class="selection">
+                <option value='sorter-wrapper'>Убрать строки</option>
+                <option value='separator-wrapper'>Вставить отступы</option>
+            </select>
+        </div>
+        <div class="wrapper">
+            <div class="sorter-wrapper subwrapper">
+                <label for="userMessage">Ваш текст:</label>
+                <textarea id="userMessage" name="userMessage" rows="14" cols="40"></textarea>
+                <label for="exludedWord">
+                    Строчки, содержащие данное слово, будут удалены из текста
+                </label>
+                <input type="text" id="exludedWord" name="exludedWord">
+                <button id="excludeLinesBtn">Обработать</button>
+                <label for="outputText1">Результат</label>
+                <textarea id="outputText1" name="outputText1" rows="12" cols="40"></textarea>
+            </div>
+            <div class="separator-wrapper subwrapper hidden">
+                <label for="textToBreak">Ваш текст:</label>
+                <textarea id="textToBreak" name="textToBreak" rows="14" cols="40"></textarea>
+                <label for="separator">В текст будут добавлены отступы после каждого указанного слова
+                </label>
+                <input type="text" id="separator" name="separator">
+                <button id="separateLinesBtn">Обработать</button>
+                <label for="outputText2">Результат</label>
+                <textarea id="outputText2" name="outputText2" rows="12" cols="40"></textarea>
+            </div>
         </div>
     </div>
 </body>
